@@ -54,7 +54,8 @@ const year2023 = [
       <>
         <Paragraph>
           셀러허브 공식 홈페이지 개편<br />
-          셀러허브 3.0 API 를 활용하여 REST 아키텍쳐 구현(Restful)
+          셀러허브 3.0 API 를 활용하여 REST 아키텍쳐 구현(Restful)<br />
+          <a href="https://sellerhub.co.kr/" target="_blank" rel="noreferrer">https://sellerhub.co.kr</a>
         </Paragraph>
         <Paragraph>
           <Tag color="red">React</Tag>
