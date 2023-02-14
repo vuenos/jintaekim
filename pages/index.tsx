@@ -44,12 +44,12 @@ const myData = [
 const year2023 = [
   {
     dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="#108ee9">셀러허브 2023 .02</Tag>),
+    label: (<Tag color="purple">셀러허브 2023 .02</Tag>),
     children: '현재 재직 중',
     color: 'green',
   },
   {
-    label: (<Tag color="#108ee9">셀러허브 2022 .04</Tag>),
+    label: (<Tag color="purple">셀러허브 2022 .04</Tag>),
     children:
       <>
         <Paragraph>
@@ -66,7 +66,7 @@ const year2023 = [
     ,
   },
   {
-    label: (<Tag color="#108ee9">셀러허브 2021 .09</Tag>),
+    label: (<Tag color="purple">셀러허브 2021 .09</Tag>),
     children: (
       <>
         <Paragraph>
@@ -81,7 +81,7 @@ const year2023 = [
     ),
   },
   {
-    label: (<Tag color="#108ee9">셀러허브 2021 .06</Tag>),
+    label: (<Tag color="purple">셀러허브 2021 .06</Tag>),
     children: (
       <>
         <Paragraph>
@@ -512,7 +512,7 @@ export default function Home() {
               gutter={[16, 16]}
               style={{ marginTop: '24px', padding: 0, minHeight: 380, background: '#f5f5f5' }}
             >
-              <Col span={24}>
+              <Col span={24} lg={12}>
                 <Card
                   title="2021 ~ 2023"
                   bordered={false}
@@ -530,7 +530,7 @@ export default function Home() {
                 </Card>
               </Col>
 
-              <Col span={24}>
+              <Col span={24} lg={12}>
                 <Card title="2018 ~ 2021" extra={<Text type="secondary">(주요 프로젝트만 기술함)</Text>} bordered={false}>
                   <Alert
                     message="관공서, 금융, 항공사 프로젝트 진행함. 주로 Web, Mobile 반응형 UI 구현과 웹접근성 인증마크 획득"
@@ -545,7 +545,7 @@ export default function Home() {
                 </Card>
               </Col>
 
-              <Col span={24}>
+              <Col span={24} lg={12}>
                 <Card title="2012 ~ 2017" extra={<Text type="secondary">(주요 프로젝트만 기술함)</Text>} bordered={false}>
                   <Alert
                     message="개인 창업 후 고도몰, 카페24 솔루션으로 쇼핑몰 구축과 워드프레스로 웹사이트 구축을 주로 함. Web + Mobile Responsive UI 를 주로 구현 함."
@@ -560,7 +560,7 @@ export default function Home() {
                 </Card>
               </Col>
 
-              <Col span={24}>
+              <Col span={24} lg={12}>
                 <Card title="2004 ~ 2011" extra={<Text type="secondary">(주요 프로젝트만 기술함)</Text>} bordered={false}>
                   <Alert
                     message="관공서, 기업, 금융, 방송국 등의 웹접근성 인증마크 및 웹표준(웹 2.0) 개선 관련 컨설팅과 리팩토링 업무를 주로 함."
