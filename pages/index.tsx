@@ -51,24 +51,55 @@ const year2023 = [
   },
   {
     dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    children: `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.`,
+    label: (<Tag color="#108ee9">셀러허브 2022 .09</Tag>),
+    children: '11',
   },
   {
-    color: 'red',
-    children: 'Network problems being solved 2015-09-01',
+    label: (<Tag color="#108ee9">셀러허브 2021 .09</Tag>),
+    children: (
+      <>
+        <Paragraph>
+          dropk(beta) - 한국 제품을 미국으로 판매하는 드랍쉬핑 개념의 플랫폼<br />
+          blade template 으로 front 구현
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">javaScript</Tag>
+          <Tag color="red">blade template</Tag>
+        </Paragraph>
+      </>
+    ),
   },
   {
-    children: 'Create a services site 2015-09-01',
+    label: (<Tag color="#108ee9">셀러허브 2021 .06</Tag>),
+    children: (
+      <>
+        <Paragraph>
+          shopify 기반 &quot;올타리 몰&quot; 온라인 쇼핑몰 구축 참여(Front, UI)<br />
+          <a href="https://wooltariusa.com" target="_blank" rel="noreferrer">https://wooltariusa.com</a><br />
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">liquid</Tag>
+          <Tag color="red">shopify CLI</Tag>
+          <Tag color="red">javaScript</Tag>
+        </Paragraph>
+      </>
+    ),
   },
   {
     dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="purple">2021 .03</Tag>),
+    label: (<Tag color="#87d068">2021 .03</Tag>),
     children: (
-      <Paragraph>
-        고용보험 민원서비스 고도화(web, mobile)<br />
-        <a href="https://www.ei.go.kr" target="_blank" rel="noreferrer">https://www.ei.go.kr</a><br />
-
-      </Paragraph>
+      <>
+        <Paragraph>
+          고용보험 민원서비스 고도화(web, mobile)<br />
+          실업급여 인터넷 신청 단계별 UI 를 javaScript 로 구현<br />
+          <a href="https://www.ei.go.kr" target="_blank" rel="noreferrer">https://www.ei.go.kr</a>
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">javaScript, jQuery</Tag>
+          <Tag color="red">HTML5</Tag>
+        </Paragraph>
+      </>
     ),
   },
 ]
@@ -96,13 +127,12 @@ export default function Home() {
               items={gnbItems}
             />
           </Header>
-          <Content style={{ padding: '24px' }}>
+          <Content style={{ maxWidth: '1680px', margin: '0', padding: '24px' }}>
             <Row
               gutter={[16, 16]}
-              className="site-layout-content"
               style={{ padding: 0, minHeight: 380, background: '#f5f5f5' }}
             >
-              <Col sm={8} xs={24}>
+              <Col md={6} sm={24}>
                 <Card bordered={false}>
                   <Meta
                     avatar={<Avatar src="https://joeschmoe.io/api/v1/random" size={80} />}
@@ -118,7 +148,7 @@ export default function Home() {
                 </Card>
               </Col>
 
-              <Col sm={16} xs={24}>
+              <Col md={18} sm={24}>
                 <Card title="2021 ~ 2023" bordered={false}>
                   <Timeline
                     mode="alternate"
@@ -129,8 +159,8 @@ export default function Home() {
             </Row>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            <Paragraph>©2023 Jintae kim</Paragraph>
-            <Paragraph>
+            <Paragraph type="secondary">©2023 Jintae kim</Paragraph>
+            <Paragraph type="secondary">
               이 페이지는 React 18, Typescript, <a href="https://nextjs.org/blog/next-13" target="_blank" rel="noreferrer">Next.js 13</a> 과 <a href="https://ant.design" target="_blank" rel="noreferrer">Antd</a> 로 제작되었습니다.
             </Paragraph>
           </Footer>
