@@ -43,16 +43,27 @@ const myData = [
 
 const year2023 = [
   {
-    children: 'Create a services site 2015-09-01',
-  },
-  {
-    children: 'Solve initial network problems 2015-09-01',
+    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
+    label: (<Tag color="#108ee9">셀러허브 2023 .02</Tag>),
+    children: '현재 재직 중',
     color: 'green',
   },
   {
-    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="#108ee9">셀러허브 2022 .09</Tag>),
-    children: '11',
+    label: (<Tag color="#108ee9">셀러허브 2022 .04</Tag>),
+    children:
+      <>
+        <Paragraph>
+          셀러허브 공식 홈페이지 개편<br />
+          셀러허브 3.0 API 를 활용하여 REST 아키텍쳐 구현(Restful)
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">React</Tag>
+          <Tag color="red">Typescript</Tag>
+          <Tag color="red">Scss</Tag>
+          <Tag color="red">npm, webpack</Tag>
+        </Paragraph>
+      </>
+    ,
   },
   {
     label: (<Tag color="#108ee9">셀러허브 2021 .09</Tag>),
