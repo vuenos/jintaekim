@@ -82,6 +82,7 @@ const year2023 = [
     ),
   },
   {
+    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
     label: (<Tag color="purple">셀러허브 2021 .06</Tag>),
     children: (
       <>
@@ -97,9 +98,14 @@ const year2023 = [
       </>
     ),
   },
+];
+
+
+const year2021 = [
   {
     dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
     label: (<Tag color="purple">2021 .03</Tag>),
+    color: 'green',
     children: (
       <>
         <Paragraph>
@@ -114,12 +120,7 @@ const year2023 = [
       </>
     ),
   },
-];
-
-
-const year2021 = [
   {
-    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
     label: (<Tag color="purple">2020 .10 ~ 2021. 02</Tag>),
     children:
       <>
