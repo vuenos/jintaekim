@@ -52,7 +52,7 @@ const About = () => {
               <Col span={24}>
                 <Card bordered={false}>
                   <Meta
-                    avatar={<Avatar src="/62047079.jpeg" size={260} />}
+                    avatar={<Avatar src="/62047079.jpeg" size={120} />}
                     title="김 진태"
                     description={
                       <>
