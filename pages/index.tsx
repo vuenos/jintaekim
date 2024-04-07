@@ -41,12 +41,91 @@ const myData = [
   }
 ];
 
-const year2023 = [
+const year2024 = [
+  {
+    children:
+      <>
+        <Paragraph>
+          Oliviaumma USA 쇼피파이 온라인몰 구축<br />
+          <a href="https://oliviaumma.com/" target="_blank" rel="noreferrer">https://oliviaumma.com</a>
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">Shopify</Tag>
+          <Tag color="red">liquid</Tag>
+        </Paragraph>
+      </>
+    ,
+  },
+  {
+    children:
+      <>
+        <Paragraph>
+          이화여대 건축과, 서울시립대 조경학과 온라인 졸업전시회<br />
+          <a href="https://www.steeledu.com/" target="_blank" rel="noreferrer">https://www.steeledu.com</a>
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">React</Tag>
+          <Tag color="red">Vercel</Tag>
+        </Paragraph>
+      </>
+    ,
+  },
+  {
+    children:
+      <>
+        <Paragraph>
+          Free Thumbnail Maker - 유튜브, 틱톡 썸네일 제작<br />
+          <a href="https://www.thumbnail.co.kr/" target="_blank" rel="noreferrer">https://www.thumbnail.co.kr</a>
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">React</Tag>
+          <Tag color="red">TypeScript</Tag>
+          <Tag color="red">Vercel</Tag>
+        </Paragraph>
+      </>
+    ,
+  },
   {
     dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="purple">셀러허브 2023 .02</Tag>),
-    children: '현재 재직 중',
-    color: 'green',
+    label: (<Tag color="purple">2024.2</Tag>),
+    children:
+      <>
+        <Paragraph>
+          셀러허브 퇴사
+        </Paragraph>
+      </>
+    ,
+  },
+];
+
+const year2023 = [
+  {
+    label: (<Tag color="purple">2023. 10</Tag>),
+    children:
+      <>
+        <Paragraph>
+          식스샵 상점관리 편집기능 -  로그인, 회원가입 페이지 편집 기능 추가 <br />(<a href="https://help.sixshop.com/news/updates/231013"  target="_blank" rel="noreferrer">내용보기</a>)<br />
+          <a href="https://www.sixshop.com/" target="_blank" rel="noreferrer">https://www.sixshop.com</a>
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">javaScript</Tag>
+        </Paragraph>
+      </>
+    ,
+  },
+  {
+    label: (<Tag color="purple">2023. 05</Tag>),
+    children:
+      <>
+        <Paragraph>
+          식스샵 상점관리 편집기능 -  장바구니 페이지 편집 기능 추가  (<a href="https://help.sixshop.com/news/updates/230526"  target="_blank" rel="noreferrer">내용보기</a>)<br />
+          <a href="https://www.sixshop.com/" target="_blank" rel="noreferrer">https://www.sixshop.com</a>
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">javaScript</Tag>
+        </Paragraph>
+      </>
+    ,
   },
   {
     label: (<Tag color="purple">셀러허브 2022 .04</Tag>),
@@ -54,14 +133,13 @@ const year2023 = [
       <>
         <Paragraph>
           셀러허브 공식 홈페이지 개편<br />
-          셀러허브 3.0 API 를 활용하여 REST 아키텍쳐 구현(Restful)<br />
+          셀러허브 3.0 API 를 활용<br />
           <a href="https://sellerhub.co.kr/" target="_blank" rel="noreferrer">https://sellerhub.co.kr</a>
         </Paragraph>
         <Paragraph>
           <Tag color="red">React</Tag>
           <Tag color="red">Typescript</Tag>
           <Tag color="red">SCSS</Tag>
-          <Tag color="red">npm, webpack</Tag>
         </Paragraph>
       </>
     ,
@@ -464,14 +542,18 @@ export default function Home() {
               <Col md={12} sm={24}>
                 <Card bordered={false}>
                   <Meta
-                    avatar={<Avatar src="/jtk.jpg" style={{ width: '120px' }} size={120} />}
+                    avatar={<Avatar src="/62047079.jpeg" style={{ width: '120px' }} size={120} />}
                     title="김 진태"
                     description={
                       <Paragraph type="secondary">
-                        Jintae Kim<br />
-                        <a href="mailto:vuenos@gmail.com">vuenos@gmail.com</a><br />
-                        +82 10-4860-6521<br />
-                        <GithubOutlined /> <a href="https://github.com/vuenos" target="_blank" rel="noreferrer">https://github.com/vuenos</a>
+                        Jintae Kim<br/>
+                        <a href="mailto:vuenos@gmail.com">vuenos@gmail.com</a>, <a
+                        href="mailto:jintae.email@gmail.com">jintae.email@gmail.com</a>
+                        <br/>
+                        <GithubOutlined/> <a href="https://github.com/vuenos" target="_blank"
+                                             rel="noreferrer">https://github.com/vuenos</a><br />
+                        <a href="https://www.thumbnail.co.kr" target="_blank"
+                           rel="noreferrer">https://www.thumbnail.co.kr</a>
                       </Paragraph>
                     }
                   />
@@ -497,11 +579,7 @@ export default function Home() {
                         <Tag color="blue">Next.js</Tag>
                         <Tag color="blue">TypeScript</Tag>
                         <Tag color="blue">bootstrap</Tag>
-                        <Tag color="blue">Zeplin</Tag>
                         <Tag color="blue">Figma</Tag>
-
-                        <Tag color="green">npm</Tag>
-                        <Tag color="green">webpack</Tag>
                       </Paragraph>
                     }
                   />
@@ -513,6 +591,24 @@ export default function Home() {
               gutter={[16, 16]}
               style={{ marginTop: '24px', padding: 0, minHeight: 380, background: '#f5f5f5' }}
             >
+              <Col span={24} lg={12}>
+                <Card
+                  title={<Title level={4} style={{ margin: '0' }}>2024 <Text type="secondary"></Text></Title>}
+                  bordered={false}
+                >
+                  <Alert
+                    message="프리렌서 활동"
+                    type="info"
+                    showIcon
+                    style={{ marginBottom: '24px' }}
+                  />
+                  <Timeline
+                    mode="alternate"
+                    items={year2024}
+                  />
+                </Card>
+              </Col>
+
               <Col span={24} lg={12}>
                 <Card
                   title={<Title level={4} style={{ margin: '0' }}>2021 ~ 2023 <Text type="secondary">(셀러허브, 팀장)</Text></Title>}
