@@ -58,15 +58,15 @@ const About = () => {
                       <>
                         <Paragraph type="secondary">
                           Jintae Kim<br />
-                          <a href="mailto:vuenos@gmail.com">vuenos@gmail.com</a><br />
-                          +82 10-4860-6521<br />
+                          <a href="mailto:vuenos@gmail.com">vuenos@gmail.com</a>, <a
+                          href="mailto:jintae.email@gmail.com">jintae.email@gmail.com</a><br />
                           <GithubOutlined /> <a href="https://github.com/vuenos" target="_blank" rel="noreferrer">https://github.com/vuenos</a>
                         </Paragraph>
 
                         <Paragraph style={{ marginTop: '40px' }}>
                           1976년 경기도 부천 태생, 2남 1녀 중 차남. 건축학 전공.<br />
                           현재 경기도 고양시 10년째 거주.<br />
-                          MBTI : INTJ-T<br />
+                          MBTI : INTP-T<br />
                           존 르 카레 의 추리소설을 좋아함. (추운 나라에서 돌아온 스파이, 팅커 테일러 솔져 스파이)<br />
                           캠핑과 딸에게 오므라이스 해주는 걸 좋아함.
                         </Paragraph>
@@ -79,7 +79,7 @@ const About = () => {
 
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            <Paragraph type="secondary">©2023 Jintae kim</Paragraph>
+            <Paragraph type="secondary">©2024 Jintae kim</Paragraph>
             <Paragraph type="secondary">
               이 페이지는 <a href="https://ko.reactjs.org/" target="_blank" rel="noreferrer">React 18</a>, <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">TypeScript</a>, <a href="https://nextjs.org/blog/next-13" target="_blank" rel="noreferrer">Next.js 13</a> 과 <a href="https://ant.design" target="_blank" rel="noreferrer">Antd</a> 로 제작되었습니다.
             </Paragraph>

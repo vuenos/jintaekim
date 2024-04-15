@@ -60,6 +60,34 @@ const year2024 = [
     children:
       <>
         <Paragraph>
+          T** 그룹 납품, 재고, 물류관리 시스텝 Backoffice 프론트 템플릿 작업<br />
+          <a href="https://tkg-react.vercel.app/" target="_blank" rel="noreferrer">https://tkg-react.vercel.app</a>
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">React</Tag>
+          <Tag color="red">DevExtreme</Tag>
+        </Paragraph>
+      </>
+    ,
+  },
+  {
+    children:
+      <>
+        <Paragraph>
+          AI 캐스터, 보이스 생성 서비스 운영 Backoffice 프론트개발<br />
+          모델과 목소리 선택하여 대본을 읽어주는 AI 기반 영상을 제작하는 서비스
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">React</Tag>
+          <Tag color="red">Antd</Tag>
+        </Paragraph>
+      </>
+    ,
+  },
+  {
+    children:
+      <>
+        <Paragraph>
           이화여대 건축과, 서울시립대 조경학과 온라인 졸업전시회<br />
           <a href="https://www.steeledu.com/" target="_blank" rel="noreferrer">https://www.steeledu.com</a>
         </Paragraph>
@@ -547,6 +575,8 @@ export default function Home() {
                     description={
                       <Paragraph type="secondary">
                         Jintae Kim<br/>
+                        Birth: Apr 2, 1976<br />
+                        Live: 고양시<br />
                         <a href="mailto:vuenos@gmail.com">vuenos@gmail.com</a>, <a
                         href="mailto:jintae.email@gmail.com">jintae.email@gmail.com</a>
                         <br/>
@@ -675,7 +705,7 @@ export default function Home() {
 
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            <Paragraph type="secondary">©2023 Jintae kim</Paragraph>
+            <Paragraph type="secondary">©2024 Jintae kim</Paragraph>
             <Paragraph type="secondary">
               이 페이지는 <a href="https://ko.reactjs.org/" target="_blank" rel="noreferrer">React 18</a>, <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">TypeScript</a>, <a href="https://nextjs.org/blog/next-13" target="_blank" rel="noreferrer">Next.js 13</a> 과 <a href="https://ant.design" target="_blank" rel="noreferrer">Antd</a> 로 제작되었습니다.
             </Paragraph>
