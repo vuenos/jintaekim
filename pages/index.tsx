@@ -603,7 +603,6 @@ export default function Home() {
               <Col md={12} sm={24}>
                 <Card bordered={false}>
                   <Meta
-                    avatar={<Avatar src="/62047079.jpeg" style={{ width: '120px' }} size={120} />}
                     title="김 진태"
                     description={
                       <Paragraph type="secondary">
