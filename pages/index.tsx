@@ -43,6 +43,35 @@ const myData = [
 
 const year2024 = [
   {
+    label: (<Tag color="purple">2024. 5 ~ 7</Tag>),
+    children:
+      <>
+        <Paragraph>
+          SK에너지 머핀 닷컴 운영<br />
+          <a href="https://www.enclean.com" target="_blank" rel="noreferrer">https://www.enclean.com/</a>
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">React</Tag>
+          <Tag color="red">Next.js 13</Tag>
+        </Paragraph>
+      </>
+    ,
+  },
+  {
+    label: (<Tag color="purple">2024. 4</Tag>),
+    children:
+      <>
+        <Paragraph>
+          혜움랩스 컨설팅 랜딩페이지<br />
+          <a href="https://www.heumtax.com/private" target="_blank" rel="noreferrer">https://www.heumtax.com/private</a>
+        </Paragraph>
+        <Paragraph>
+          <Tag color="red">Instapage</Tag>
+        </Paragraph>
+      </>
+    ,
+  },
+  {
     children:
       <>
         <Paragraph>
@@ -57,6 +86,7 @@ const year2024 = [
     ,
   },
   {
+    label: (<Tag color="purple">2023. 10 ~ 12</Tag>),
     children:
       <>
         <Paragraph>
@@ -71,6 +101,7 @@ const year2024 = [
     ,
   },
   {
+    label: (<Tag color="purple">2023. 7</Tag>),
     children:
       <>
         <Paragraph>
@@ -85,11 +116,13 @@ const year2024 = [
     ,
   },
   {
+    label: (<Tag color="purple">2023. 6</Tag>),
     children:
       <>
         <Paragraph>
           이화여대 건축과, 서울시립대 조경학과 온라인 졸업전시회<br />
-          <a href="https://www.steeledu.com/" target="_blank" rel="noreferrer">https://www.steeledu.com</a>
+            <a href="https://works-fed.vercel.app/"target="_blank" rel="noreferrer">https://works-fed.vercel.app/</a>
+            <br /><s style={{ color: "#dadada" }}>https://www.steeledu.com</s>
         </Paragraph>
         <Paragraph>
           <Tag color="red">React</Tag>
