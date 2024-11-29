@@ -42,6 +42,20 @@ const myData = [
 ];
 
 const year2024 = [
+    {
+        label: (<Tag color="purple">2024. 9</Tag>),
+        children:
+            <>
+                <Paragraph>
+                    k-startuphub<br />
+                    <a href="https://www.k-startuphub.org/" target="_blank" rel="noreferrer">https://www.k-startuphub.org/</a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">Webflow</Tag>
+                </Paragraph>
+            </>
+        ,
+    },
   {
     label: (<Tag color="purple">2024. 5 ~ 7</Tag>),
     children:
@@ -633,15 +647,18 @@ export default function Home() {
                         <Tag color="red">HTML5</Tag>
                         <Tag color="red">CSS3</Tag>
                         <Tag color="red">SCSS</Tag>
-                        <Tag color="red">Antd</Tag>
+                        <Tag color="red">Ant Design</Tag>
                         <Tag color="red">ReactQuery</Tag>
                         <Tag color="red">git</Tag>
+                        <Tag color="red">Webflow</Tag>
+                        <Tag color="red">Instapage</Tag>
 
                         <Tag color="blue">Redux, Recoil</Tag>
                         <Tag color="blue">Next.js</Tag>
                         <Tag color="blue">TypeScript</Tag>
                         <Tag color="blue">bootstrap</Tag>
                         <Tag color="blue">Figma</Tag>
+                        <Tag color="blue">AG Grid</Tag>
                       </Paragraph>
                     }
                   />
