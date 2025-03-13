@@ -15,12 +15,12 @@ const gnbItems: MenuProps['items'] = [
       <Link href="/">Portfolio</Link>
     )
   },
-  {
-    'key': '2',
-    'label': (
-      <Link href="/About">About me</Link>
-    )
-  }
+  // {
+  //   'key': '2',
+  //   'label': (
+  //     <Link href="/About">About me</Link>
+  //   )
+  // }
 ];
 
 const { Meta } = Card;
@@ -42,6 +42,39 @@ const myData = [
 ];
 
 const year2024 = [
+    {
+        label: (<Tag color="purple">2024. 08 ~ 2025. 02</Tag>),
+        children:
+            <>
+                <Paragraph>
+                    한화 큐셀 물류정보화 시스템<br />
+                    <a href="https://qlp.qcells.com/" target="_blank" rel="noreferrer">https://qlp.qcells.com/</a><br />
+                    전체 컴포넌트 구조 설계 및 개발, Dashboard, Visibility 메뉴(기준자료 조회, 엑셀업로드 등), FAQ 등의 프론트를 AG-Grid 와 Ant Design 으로 개발
+                </Paragraph>
+                <Paragraph>
+                  <Tag color="red">React.js 18</Tag>
+                  <Tag color="red">Styled-components</Tag>
+                  <Tag color="red">Antd Design</Tag>
+                  <Tag color="red">AG-Grid</Tag>
+                </Paragraph>
+            </>
+        ,
+    },
+    {
+        label: (<Tag color="purple">2024. 11~12</Tag>),
+        children:
+            <>
+                <Paragraph>
+                    waltzdiamonds 온라인 쥬얼리샵<br />
+                    <a href="https://waltzdiamonds.com" target="_blank" rel="noreferrer">https://waltzdiamonds.com</a>
+                </Paragraph>
+                <Paragraph>
+                  <Tag color="red">Shopify</Tag>
+                  <Tag color="red">liquid</Tag>
+                </Paragraph>
+            </>
+        ,
+    },
     {
         label: (<Tag color="purple">2024. 9</Tag>),
         children:
@@ -643,18 +676,20 @@ export default function Home() {
                     description={
                       <Paragraph type="secondary" style={{ lineHeight: '2.1em' }}>
                         <Tag color="red">React</Tag>
+                        <Tag color="red">Next.js</Tag>
+                        <Tag color="red">Styled-Components</Tag>
                         <Tag color="red">javaScript</Tag>
+                        <Tag color="red">SCSS</Tag>
                         <Tag color="red">HTML5</Tag>
                         <Tag color="red">CSS3</Tag>
-                        <Tag color="red">SCSS</Tag>
                         <Tag color="red">Ant Design</Tag>
                         <Tag color="red">ReactQuery</Tag>
                         <Tag color="red">git</Tag>
                         <Tag color="red">Webflow</Tag>
                         <Tag color="red">Instapage</Tag>
+                        <Tag color="red">Shopify</Tag>
 
                         <Tag color="blue">Redux, Recoil</Tag>
-                        <Tag color="blue">Next.js</Tag>
                         <Tag color="blue">TypeScript</Tag>
                         <Tag color="blue">bootstrap</Tag>
                         <Tag color="blue">Figma</Tag>
@@ -672,7 +707,7 @@ export default function Home() {
             >
               <Col span={24} lg={12}>
                 <Card
-                  title={<Title level={4} style={{ margin: '0' }}>2024 <Text type="secondary"></Text></Title>}
+                  title={<Title level={4} style={{ margin: '0' }}>2024 ~ 2025 <Text type="secondary"></Text></Title>}
                   bordered={false}
                 >
                   <Alert
