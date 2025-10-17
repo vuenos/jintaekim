@@ -42,6 +42,40 @@ const myData = [
 ];
 
 const year2024 = [
+  {
+        label: (<Tag color="purple">2025. 06 ~ 2025. 11</Tag>),
+        children:
+            <>
+                <Paragraph>
+                    법무부 산하 공공기관 포털사이트 프론트 개발<br />
+                    전체 컴포넌트 구조 설계 및 개발, 프론트개발 Nextjs, Ag-grid<br />
+                </Paragraph>
+                <Paragraph>
+                  <Tag color="red">Nextjs 15</Tag>
+                  <Tag color="red">typeScript</Tag>
+                  <Tag color="red">Styled-components</Tag>
+                </Paragraph>
+            </>
+        ,
+    },
+  {
+        label: (<Tag color="purple">2025. 03 ~ 2025. 05</Tag>),
+        children:
+            <>
+                <Paragraph>
+                    LLM 기반으로 한 기업용 AI 에이전트 프론트 개발<br />
+                    전체 컴포넌트 구조 설계 및 개발, 프론트개발 Nextjs, UI 템플릿 Ant Design + Styled-components 으로 개발<br />
+                  LLM 서버와 통신하여 질의 및 응답을 AI 서비스와 같은 형태로 구현
+                </Paragraph>
+                <Paragraph>
+                  <Tag color="red">Nextjs 15</Tag>
+                  <Tag color="red">typeScript</Tag>
+                  <Tag color="red">Styled-components</Tag>
+                  <Tag color="red">Antd Design</Tag>
+                </Paragraph>
+            </>
+        ,
+    },
     {
         label: (<Tag color="purple">2024. 08 ~ 2025. 02</Tag>),
         children:
