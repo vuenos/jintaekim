@@ -105,3 +105,197 @@ a {
     color-scheme: dark;
   }
 }
+
+.print-only-year-cards {
+  display: none;
+}
+
+.print-first-page-group {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .print-profile-card .print-profile-split > .ant-col:first-child {
+    border-right: 1px solid #f0f0f0;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 8mm;
+  }
+
+  html,
+  body {
+    overflow: visible !important;
+    max-width: none !important;
+    background: #fff !important;
+    color: #000 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  main,
+  .layout,
+  .ant-layout,
+  .ant-layout-content {
+    background: #fff !important;
+    overflow: visible !important;
+  }
+
+  .ant-layout-header,
+  .ant-layout-footer {
+    display: none !important;
+  }
+
+  .ant-layout-content {
+    padding: 8px !important;
+  }
+
+  .print-timeline-row.ant-row {
+    display: block !important;
+    min-height: auto !important;
+    margin: 0 !important;
+  }
+
+  .print-timeline-row > .ant-col {
+    display: block !important;
+    flex: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .screen-only-year-card {
+    display: none !important;
+  }
+
+  .print-only-year-cards {
+    display: block !important;
+  }
+
+  /* 첫 페이지: 프로필·스킬 + 2024~2026 첫 카드 */
+  .print-first-page-group {
+    break-inside: auto;
+    page-break-inside: auto;
+    margin-bottom: 0 !important;
+  }
+
+  .print-profile-card {
+    margin: 0 0 6px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-profile-card .ant-card-body {
+    padding: 8px 10px !important;
+  }
+
+  .print-profile-card .print-profile-split.ant-row {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    align-items: flex-start !important;
+    margin: 0 !important;
+  }
+
+  .print-profile-card .print-profile-split > .ant-col {
+    flex: 0 0 50% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    padding: 0 8px !important;
+  }
+
+  .print-profile-card .print-profile-split > .ant-col:first-child {
+    border-right: 1px solid #f0f0f0;
+    padding-left: 0 !important;
+  }
+
+  .print-profile-card .print-profile-split > .ant-col:last-child {
+    padding-right: 0 !important;
+  }
+
+  .print-profile-card .ant-card-meta-title {
+    margin-bottom: 2px !important;
+    font-size: 14px !important;
+  }
+
+  .print-profile-card .ant-card-meta-description,
+  .print-profile-card .ant-typography {
+    margin-bottom: 0 !important;
+    line-height: 1.35 !important;
+    font-size: 11px !important;
+  }
+
+  .print-profile-card .ant-tag {
+    margin-bottom: 2px !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+  }
+
+  .print-first-page-group > .ant-col {
+    padding: 0 !important;
+  }
+
+  .print-year-card--lead {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
+    margin-top: 0 !important;
+  }
+
+  .print-timeline-row {
+    margin-top: 0 !important;
+    min-height: 0 !important;
+    background: transparent !important;
+  }
+
+  /* 2021~ 이후 년도는 새 페이지에서 시작 */
+  .print-timeline-row
+    .print-year-section
+    > .print-year-card:first-child {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .print-year-card {
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-year-card + .print-year-card {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .ant-card-head {
+    padding: 8px 12px !important;
+    min-height: auto !important;
+  }
+
+  .ant-card-body {
+    padding: 10px 12px !important;
+  }
+
+  .ant-alert {
+    margin-bottom: 12px !important;
+    padding: 6px 10px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .ant-timeline-item {
+    padding-bottom: 10px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .ant-typography {
+    margin-bottom: 0.4em !important;
+  }
+
+  a[href]::after {
+    content: none;
+  }
+}

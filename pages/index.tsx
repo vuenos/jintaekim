@@ -1,835 +1,1201 @@
-import Head from 'next/head';
-import Image from 'next/image';
+import Head from "next/head";
+import Image from "next/image";
 import { MenuProps } from "antd";
-import { Layout, theme, Typography, Menu, Row, Col, Avatar, Space, List, Card, Timeline, Tag, Alert } from "antd";
-import Link from 'next/link';
-import { UserOutlined, IdcardOutlined, ClockCircleOutlined, GithubOutlined } from "@ant-design/icons"
+import {
+    Layout,
+    theme,
+    Typography,
+    Menu,
+    Row,
+    Col,
+    Avatar,
+    Space,
+    List,
+    Card,
+    Tag,
+} from "antd";
+import Link from "next/link";
+import {
+    UserOutlined,
+    IdcardOutlined,
+    ClockCircleOutlined,
+    GithubOutlined,
+} from "@ant-design/icons";
+import YearTimelineCard from "../components/YearTimelineCard";
 
 const { Header, Content, Footer } = Layout;
 const { Title, Text, Paragraph } = Typography;
 
-const gnbItems: MenuProps['items'] = [
-  {
-    'key': '1',
-    'label': (
-      <Link href="/">Portfolio</Link>
-    )
-  },
-  // {
-  //   'key': '2',
-  //   'label': (
-  //     <Link href="/About">About me</Link>
-  //   )
-  // }
+const gnbItems: MenuProps["items"] = [
+    {
+        key: "1",
+        label: <Link href="/">Portfolio</Link>,
+    },
+    // {
+    //   'key': '2',
+    //   'label': (
+    //     <Link href="/About">About me</Link>
+    //   )
+    // }
 ];
 
 const { Meta } = Card;
 
 const myData = [
-  {
-    title: '김 진태',
-    description: 'Jintae kim'
-  },
-  {
-    title: 'Contact',
-    description: (
-      <Paragraph type="secondary">
-        vuenos@gmail.com<br />
-        +82 10-4860-6521
-      </Paragraph>
-    )
-  }
+    {
+        title: "김 진태",
+        description: "Jintae kim",
+    },
+    {
+        title: "Contact",
+        description: (
+            <Paragraph type="secondary">
+                vuenos@gmail.com
+                <br />
+                +82 10-4860-6521
+            </Paragraph>
+        ),
+    },
 ];
 
 const year2024 = [
-  {
-        label: (<Tag color="purple">2025. 06 ~ 2025. 11</Tag>),
-        children:
+    {
+        label: <Tag color="purple">2026. 01 ~ 2026. 05</Tag>,
+        children: (
             <>
                 <Paragraph>
-                    법무부 산하 공공기관 포털사이트 프론트 개발<br />
-                    전체 컴포넌트 구조 설계 및 개발, 프론트개발 Nextjs, Ag-grid<br />
+                    HL디앤아이한라 PMS React 전환작업
+                    <br />
+                    Claude code 에 의해 자동화로 전환된 프론트 화면을 폴리싱
+                    작업
                 </Paragraph>
                 <Paragraph>
-                  <Tag color="red">Nextjs 15</Tag>
-                  <Tag color="red">typeScript</Tag>
-                  <Tag color="red">Styled-components</Tag>
+                    <Tag color="red">React</Tag>
+                    <Tag color="red">typeScript</Tag>
+                    <Tag color="red">Tailwindcss</Tag>
                 </Paragraph>
             </>
-        ,
-    },
-  {
-        label: (<Tag color="purple">2025. 03 ~ 2025. 05</Tag>),
-        children:
-            <>
-                <Paragraph>
-                    LLM 기반으로 한 기업용 AI 에이전트 프론트 개발<br />
-                    전체 컴포넌트 구조 설계 및 개발, 프론트개발 Nextjs, UI 템플릿 Ant Design + Styled-components 으로 개발<br />
-                  LLM 서버와 통신하여 질의 및 응답을 AI 서비스와 같은 형태로 구현
-                </Paragraph>
-                <Paragraph>
-                  <Tag color="red">Nextjs 15</Tag>
-                  <Tag color="red">typeScript</Tag>
-                  <Tag color="red">Styled-components</Tag>
-                  <Tag color="red">Antd Design</Tag>
-                </Paragraph>
-            </>
-        ,
+        ),
     },
     {
-        label: (<Tag color="purple">2024. 08 ~ 2025. 02</Tag>),
-        children:
+        label: <Tag color="purple">2025. 06 ~ 2025. 12</Tag>,
+        children: (
             <>
                 <Paragraph>
-                    한화 큐셀 물류정보화 시스템<br />
-                    <a href="https://qlp.qcells.com/" target="_blank" rel="noreferrer">https://qlp.qcells.com/</a><br />
-                    전체 컴포넌트 구조 설계 및 개발, Dashboard, Visibility 메뉴(기준자료 조회, 엑셀업로드 등), FAQ 등의 프론트를 AG-Grid 와 Ant Design 으로 개발
+                    법무부 산하 기관 법무부 기록관 (
+                    <a
+                        href="https://www.mojarchives.go.kr"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.mojarchives.go.kr
+                    </a>
+                    ) 프론트 개발
+                    <br />
+                    - 전체 프로젝트, 컴포넌트 구조 설계
+                    <br />- RestAPI 기반의 컨텐츠 검색 및 UI 렌더링 제어
                 </Paragraph>
                 <Paragraph>
-                  <Tag color="red">React.js 18</Tag>
-                  <Tag color="red">Styled-components</Tag>
-                  <Tag color="red">Antd Design</Tag>
-                  <Tag color="red">AG-Grid</Tag>
+                    <Tag color="red">Nextjs 15</Tag>
+                    <Tag color="red">typeScript</Tag>
+                    <Tag color="red">Styled-components</Tag>
+                    <Tag color="red">AG-Grid</Tag>
                 </Paragraph>
             </>
-        ,
+        ),
     },
     {
-        label: (<Tag color="purple">2024. 11~12</Tag>),
-        children:
+        label: <Tag color="purple">2025. 03 ~ 2025. 05</Tag>,
+        children: (
             <>
                 <Paragraph>
-                    waltzdiamonds 온라인 쥬얼리샵<br />
-                    <a href="https://waltzdiamonds.com" target="_blank" rel="noreferrer">https://waltzdiamonds.com</a>
+                    LLM 기반으로 한 기업용 AI 에이전트 프론트 개발
+                    <br />
+                    전체 컴포넌트 구조 설계 및 개발, 프론트개발 Nextjs, UI
+                    템플릿 Ant Design + Styled-components 으로 개발
+                    <br />
+                    LLM 서버와 통신하여 질의 및 응답을 AI 서비스와 같은 형태로
+                    구현
                 </Paragraph>
                 <Paragraph>
-                  <Tag color="red">Shopify</Tag>
-                  <Tag color="red">liquid</Tag>
+                    <Tag color="red">Nextjs 15</Tag>
+                    <Tag color="red">typeScript</Tag>
+                    <Tag color="red">Styled-components</Tag>
+                    <Tag color="red">Antd Design</Tag>
                 </Paragraph>
             </>
-        ,
+        ),
     },
     {
-        label: (<Tag color="purple">2024. 9</Tag>),
-        children:
+        label: <Tag color="purple">2024. 08 ~ 2025. 02</Tag>,
+        children: (
             <>
                 <Paragraph>
-                    k-startuphub<br />
-                    <a href="https://www.k-startuphub.org/" target="_blank" rel="noreferrer">https://www.k-startuphub.org/</a>
+                    한화 큐셀 물류정보화 시스템
+                    <br />
+                    <a
+                        href="https://qlp.qcells.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://qlp.qcells.com/
+                    </a>
+                    <br />
+                    전체 컴포넌트 구조 설계 및 개발, Dashboard, Visibility
+                    메뉴(기준자료 조회, 엑셀업로드 등), FAQ 등의 프론트를
+                    AG-Grid 와 Ant Design 으로 개발
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">React.js 18</Tag>
+                    <Tag color="red">Styled-components</Tag>
+                    <Tag color="red">Antd Design</Tag>
+                    <Tag color="red">AG-Grid</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2024. 11~12</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    waltzdiamonds 온라인 쥬얼리샵
+                    <br />
+                    <a
+                        href="https://waltzdiamonds.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://waltzdiamonds.com
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">Shopify</Tag>
+                    <Tag color="red">liquid</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2024. 9</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    k-startuphub
+                    <br />
+                    <a
+                        href="https://www.k-startuphub.org/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.k-startuphub.org/
+                    </a>
                 </Paragraph>
                 <Paragraph>
                     <Tag color="red">Webflow</Tag>
                 </Paragraph>
             </>
-        ,
+        ),
     },
-  {
-    label: (<Tag color="purple">2024. 5 ~ 7</Tag>),
-    children:
-      <>
-        <Paragraph>
-          SK에너지 머핀 닷컴 운영<br />
-          <a href="https://www.enclean.com" target="_blank" rel="noreferrer">https://www.enclean.com/</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">React</Tag>
-          <Tag color="red">Next.js 13</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    label: (<Tag color="purple">2024. 4</Tag>),
-    children:
-      <>
-        <Paragraph>
-          혜움랩스 컨설팅 랜딩페이지<br />
-          <a href="https://www.heumtax.com/private" target="_blank" rel="noreferrer">https://www.heumtax.com/private</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">Instapage</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    children:
-      <>
-        <Paragraph>
-          Oliviaumma USA 쇼피파이 온라인몰 구축<br />
-          <a href="https://oliviaumma.com/" target="_blank" rel="noreferrer">https://oliviaumma.com</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">Shopify</Tag>
-          <Tag color="red">liquid</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    label: (<Tag color="purple">2023. 10 ~ 12</Tag>),
-    children:
-      <>
-        <Paragraph>
-          T** 그룹 납품, 재고, 물류관리 시스텝 Backoffice 프론트 템플릿 작업<br />
-          <a href="https://tkg-react.vercel.app/" target="_blank" rel="noreferrer">https://tkg-react.vercel.app</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">React</Tag>
-          <Tag color="red">DevExtreme</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    label: (<Tag color="purple">2023. 7</Tag>),
-    children:
-      <>
-        <Paragraph>
-          AI 캐스터, 보이스 생성 서비스 운영 Backoffice 프론트개발<br />
-          모델과 목소리 선택하여 대본을 읽어주는 AI 기반 영상을 제작하는 서비스
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">React</Tag>
-          <Tag color="red">Antd</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    label: (<Tag color="purple">2023. 6</Tag>),
-    children:
-      <>
-        <Paragraph>
-          이화여대 건축과, 서울시립대 조경학과 온라인 졸업전시회<br />
-            <a href="https://works-fed.vercel.app/"target="_blank" rel="noreferrer">https://works-fed.vercel.app/</a>
-            <br /><s style={{ color: "#dadada" }}>https://www.steeledu.com</s>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">React</Tag>
-          <Tag color="red">Vercel</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    children:
-      <>
-        <Paragraph>
-          Free Thumbnail Maker - 유튜브, 틱톡 썸네일 제작<br />
-          <a href="https://www.thumbnail.co.kr/" target="_blank" rel="noreferrer">https://www.thumbnail.co.kr</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">React</Tag>
-          <Tag color="red">TypeScript</Tag>
-          <Tag color="red">Vercel</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="purple">2024.2</Tag>),
-    children:
-      <>
-        <Paragraph>
-          셀러허브 퇴사
-        </Paragraph>
-      </>
-    ,
-  },
+    {
+        label: <Tag color="purple">2024. 5 ~ 7</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    SK에너지 머핀 닷컴 운영
+                    <br />
+                    <a
+                        href="https://www.enclean.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.enclean.com/
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">React</Tag>
+                    <Tag color="red">Next.js 13</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2024. 4</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    혜움랩스 컨설팅 랜딩페이지
+                    <br />
+                    <a
+                        href="https://www.heumtax.com/private"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.heumtax.com/private
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">Instapage</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        children: (
+            <>
+                <Paragraph>
+                    Oliviaumma USA 쇼피파이 온라인몰 구축
+                    <br />
+                    <a
+                        href="https://oliviaumma.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://oliviaumma.com
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">Shopify</Tag>
+                    <Tag color="red">liquid</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2023. 10 ~ 12</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    T** 그룹 납품, 재고, 물류관리 시스텝 Backoffice 프론트
+                    템플릿 작업
+                    <br />
+                    <a
+                        href="https://tkg-react.vercel.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://tkg-react.vercel.app
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">React</Tag>
+                    <Tag color="red">DevExtreme</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2023. 7</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    AI 캐스터, 보이스 생성 서비스 운영 Backoffice 프론트개발
+                    <br />
+                    모델과 목소리 선택하여 대본을 읽어주는 AI 기반 영상을
+                    제작하는 서비스
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">React</Tag>
+                    <Tag color="red">Antd</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2023. 6</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    이화여대 건축과, 서울시립대 조경학과 온라인 졸업전시회
+                    <br />
+                    <a
+                        href="https://works-fed.vercel.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://works-fed.vercel.app/
+                    </a>
+                    <br />
+                    <s style={{ color: "#dadada" }}>https://www.steeledu.com</s>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">React</Tag>
+                    <Tag color="red">Vercel</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        children: (
+            <>
+                <Paragraph>
+                    Free Thumbnail Maker - 유튜브, 틱톡 썸네일 제작
+                    <br />
+                    <a
+                        href="https://www.thumbnail.co.kr/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.thumbnail.co.kr
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">React</Tag>
+                    <Tag color="red">TypeScript</Tag>
+                    <Tag color="red">Vercel</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        dot: <ClockCircleOutlined style={{ fontSize: "16px" }} />,
+        label: <Tag color="purple">2024.2</Tag>,
+        children: (
+            <>
+                <Paragraph>셀러허브 퇴사</Paragraph>
+            </>
+        ),
+    },
 ];
 
 const year2023 = [
-  {
-    label: (<Tag color="purple">2023. 10</Tag>),
-    children:
-      <>
-        <Paragraph>
-          식스샵 상점관리 편집기능 -  로그인, 회원가입 페이지 편집 기능 추가 <br />(<a href="https://help.sixshop.com/news/updates/231013"  target="_blank" rel="noreferrer">내용보기</a>)<br />
-          <a href="https://www.sixshop.com/" target="_blank" rel="noreferrer">https://www.sixshop.com</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    label: (<Tag color="purple">2023. 05</Tag>),
-    children:
-      <>
-        <Paragraph>
-          식스샵 상점관리 편집기능 -  장바구니 페이지 편집 기능 추가  (<a href="https://help.sixshop.com/news/updates/230526"  target="_blank" rel="noreferrer">내용보기</a>)<br />
-          <a href="https://www.sixshop.com/" target="_blank" rel="noreferrer">https://www.sixshop.com</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    label: (<Tag color="purple">셀러허브 2022 .04</Tag>),
-    children:
-      <>
-        <Paragraph>
-          셀러허브 공식 홈페이지 개편<br />
-          셀러허브 3.0 API 를 활용<br />
-          <a href="https://sellerhub.co.kr/" target="_blank" rel="noreferrer">https://sellerhub.co.kr</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">React</Tag>
-          <Tag color="red">Typescript</Tag>
-          <Tag color="red">SCSS</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    label: (<Tag color="purple">셀러허브 2021 .09</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          dropk(beta) - 한국 제품을 미국으로 판매하는 드랍쉬핑 개념의 플랫폼<br />
-          blade template 과 javaScript
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">blade template</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="purple">셀러허브 2021 .06</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          shopify 기반 &quot;올타리 몰&quot; 온라인 쇼핑몰 구축 참여(Front, UI)<br />
-          <a href="https://wooltariusa.com" target="_blank" rel="noreferrer">https://wooltariusa.com</a><br />
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">liquid</Tag>
-          <Tag color="red">shopify CLI</Tag>
-          <Tag color="red">javaScript</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
+    {
+        label: <Tag color="purple">2023. 10</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    식스샵 상점관리 편집기능 - 로그인, 회원가입 페이지 편집 기능
+                    추가 <br />(
+                    <a
+                        href="https://help.sixshop.com/news/updates/231013"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        내용보기
+                    </a>
+                    )<br />
+                    <a
+                        href="https://www.sixshop.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.sixshop.com
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2023. 05</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    식스샵 상점관리 편집기능 - 장바구니 페이지 편집 기능 추가 (
+                    <a
+                        href="https://help.sixshop.com/news/updates/230526"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        내용보기
+                    </a>
+                    )<br />
+                    <a
+                        href="https://www.sixshop.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.sixshop.com
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">셀러허브 2022 .04</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    셀러허브 공식 홈페이지 개편
+                    <br />
+                    셀러허브 3.0 API 를 활용
+                    <br />
+                    <a
+                        href="https://sellerhub.co.kr/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://sellerhub.co.kr
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">React</Tag>
+                    <Tag color="red">Typescript</Tag>
+                    <Tag color="red">SCSS</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">셀러허브 2021 .09</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    dropk(beta) - 한국 제품을 미국으로 판매하는 드랍쉬핑 개념의
+                    플랫폼
+                    <br />
+                    blade template 과 javaScript
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">blade template</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        dot: <ClockCircleOutlined style={{ fontSize: "16px" }} />,
+        label: <Tag color="purple">셀러허브 2021 .06</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    shopify 기반 &quot;올타리 몰&quot; 온라인 쇼핑몰 구축
+                    참여(Front, UI)
+                    <br />
+                    <a
+                        href="https://wooltariusa.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://wooltariusa.com
+                    </a>
+                    <br />
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">liquid</Tag>
+                    <Tag color="red">shopify CLI</Tag>
+                    <Tag color="red">javaScript</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
 ];
 
-
 const year2021 = [
-  {
-    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="purple">2021 .03</Tag>),
-    color: 'green',
-    children: (
-      <>
-        <Paragraph>
-          고용보험 민원서비스 고도화(web, mobile)<br />
-          실업급여 인터넷 신청 단계별 UI 를 javaScript 로 구현<br />
-          <a href="https://www.ei.go.kr" target="_blank" rel="noreferrer">https://www.ei.go.kr</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript, jQuery</Tag>
-          <Tag color="red">HTML5</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    label: (<Tag color="purple">2020 .10 ~ 2021. 02</Tag>),
-    children:
-      <>
-        <Paragraph>
-          고용노동부 직업훈련 포털 HRD-Net 고도화(Web, Mobile)<br />
-          훈련과정 선택 Flow 와 애니메이션을 javaScript 와 CSS 로 구현<br />
-          <a href="https://www.hrd.go.kr" target="_blank" rel="noreferrer">https://www.hrd.go.kr</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">HTML5</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ,
-    color: 'green',
-  },
-  {
-    label: (<Tag color="purple">2020 .05</Tag>),
-    children:
-      <>
-        <Paragraph>
-          올리브영 사내 직원 커뮤니티(Web, Mobile, App view)<br />
-          React 프론트 개발을 위한 컴포넌트 제작 및 스타일링<br />
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">React</Tag>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    label: (<Tag color="purple">2019 .11</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          EBSi LMS 고도화(Table, Mobile)<br />
-          강사별 온라인 강의 영상 Player UI 와 컨트롤 제어 구현<br />
-          <a href="https://www.ebsi.co.kr" target="_blank" rel="noreferrer">https://www.ebsi.co.kr</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">HTML5</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    label: (<Tag color="purple">2019 .05 ~ 10</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          제주에어 crew 온라인 업무관리 포털 구축<br />
-          Web, Tablet, Mobile 반응형 UI 를 구현, TOAST UI 로 기능별 UI 구현(캘린더, 데이터 테이블, 입력화면 등)
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">TOAST UI</Tag>
-          <Tag color="red">javaScript</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    label: (<Tag color="purple">2019 .02</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          KDB 캐피탈 카드 웹사이트 고도화 및 웹접근성 인증마크 획득<br />
-          웹접근성 인증마크 획득을 위한 Navigation, Form, <br />
-          <a href="https://www.kdbc.co.kr/" target="_blank" rel="noreferrer">https://www.kdbc.co.kr</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript, jQuery</Tag>
-          <Tag color="red">HTML5</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    label: (<Tag color="purple">2018 .11</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          L-Pay<br />
-          Mobile UI 작업. javaScript Interaction 구현.<br />
-          <a href="https://www.lpoint.com/" target="_blank" rel="noreferrer">https://www.lpoint.com</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript, jQuery</Tag>
-          <Tag color="red">HTML5</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="purple">2018 .02</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          커피 앤 베이커리 프랜차이즈, THEBAKE 브랜딩 사이트 구축<br />
-          <a href="http://thebake.co.kr/" target="_blank" rel="noreferrer">http://thebake.co.kr</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">HTML5</Tag>
-          <Tag color="red">CSS3</Tag>
-          <Tag color="red">그누보드</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
+    {
+        dot: <ClockCircleOutlined style={{ fontSize: "16px" }} />,
+        label: <Tag color="purple">2021 .03</Tag>,
+        color: "green",
+        children: (
+            <>
+                <Paragraph>
+                    고용보험 민원서비스 고도화(web, mobile)
+                    <br />
+                    실업급여 인터넷 신청 단계별 UI 를 javaScript 로 구현
+                    <br />
+                    <a
+                        href="https://www.ei.go.kr"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.ei.go.kr
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript, jQuery</Tag>
+                    <Tag color="red">HTML5</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2020 .10 ~ 2021. 02</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    고용노동부 직업훈련 포털 HRD-Net 고도화(Web, Mobile)
+                    <br />
+                    훈련과정 선택 Flow 와 애니메이션을 javaScript 와 CSS 로 구현
+                    <br />
+                    <a
+                        href="https://www.hrd.go.kr"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.hrd.go.kr
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">HTML5</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+        color: "green",
+    },
+    {
+        label: <Tag color="purple">2020 .05</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    올리브영 사내 직원 커뮤니티(Web, Mobile, App view)
+                    <br />
+                    React 프론트 개발을 위한 컴포넌트 제작 및 스타일링
+                    <br />
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">React</Tag>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2019 .11</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    EBSi LMS 고도화(Table, Mobile)
+                    <br />
+                    강사별 온라인 강의 영상 Player UI 와 컨트롤 제어 구현
+                    <br />
+                    <a
+                        href="https://www.ebsi.co.kr"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.ebsi.co.kr
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">HTML5</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2019 .05 ~ 10</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    제주에어 crew 온라인 업무관리 포털 구축
+                    <br />
+                    Web, Tablet, Mobile 반응형 UI 를 구현, TOAST UI 로 기능별 UI
+                    구현(캘린더, 데이터 테이블, 입력화면 등)
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">TOAST UI</Tag>
+                    <Tag color="red">javaScript</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2019 .02</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    KDB 캐피탈 카드 웹사이트 고도화 및 웹접근성 인증마크 획득
+                    <br />
+                    웹접근성 인증마크 획득을 위한 Navigation, Form, <br />
+                    <a
+                        href="https://www.kdbc.co.kr/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.kdbc.co.kr
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript, jQuery</Tag>
+                    <Tag color="red">HTML5</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2018 .11</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    L-Pay
+                    <br />
+                    Mobile UI 작업. javaScript Interaction 구현.
+                    <br />
+                    <a
+                        href="https://www.lpoint.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.lpoint.com
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript, jQuery</Tag>
+                    <Tag color="red">HTML5</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        dot: <ClockCircleOutlined style={{ fontSize: "16px" }} />,
+        label: <Tag color="purple">2018 .02</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    커피 앤 베이커리 프랜차이즈, THEBAKE 브랜딩 사이트 구축
+                    <br />
+                    <a
+                        href="http://thebake.co.kr/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        http://thebake.co.kr
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">HTML5</Tag>
+                    <Tag color="red">CSS3</Tag>
+                    <Tag color="red">그누보드</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
 ];
 
 const year2012 = [
-  {
-    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="purple">2016 .12</Tag>),
-    children:
-      <>
-        <Paragraph>
-          서울시립대 건축공학과 오픈아카이브 시스템 고도화<br />
-          Project Manager, 아카이브 post UI 반응형 javaScript 로 동적 구현
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ,
-    color: 'green',
-  },
-  {
-    label: (<Tag color="purple">2015 .02</Tag>),
-    children:
-      <>
-        <Paragraph>
-          ALAND 온라인 쇼핑몰 글로벌 사이트 구축(영문, 중문)<br />
-          고도몰 솔루션으로 영문, 중문 사이트 구축함.<br />
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">고도몰</Tag>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">HTML5</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    label: (<Tag color="purple">2014 .09</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          TNGT 2015 브랜딩 사이트 구축<br />
-          워드프레스를 이용하여 브랜딩 사이트 및 블로그 구축<br />
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">워드프레스</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    label: (<Tag color="purple">2014 .06</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          카페24 솔루션을 이용하여 아이웨어 브랜드 PROJEKTPRODUKT 온라인몰 구축<br />
-          <a href="https://projektprodukt.co.kr/" target="_blank" rel="noreferrer">https://projektprodukt.co.kr</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">카페24</Tag>
-          <Tag color="red">javaScript</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    label: (<Tag color="purple">2012 .11</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          정림재단 사이트 워드프레스로 구축<br />
-          <a href="http://junglim.org/" target="_blank" rel="noreferrer">http://junglim.org/</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">Wordpress</Tag>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="purple">2012 .05</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          A.P.C 아페세 코리아 온라인몰을 고도몰 솔루션을 이용하여 구축<br />
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">고도몰</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
+    {
+        dot: <ClockCircleOutlined style={{ fontSize: "16px" }} />,
+        label: <Tag color="purple">2016 .12</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    서울시립대 건축공학과 오픈아카이브 시스템 고도화
+                    <br />
+                    Project Manager, 아카이브 post UI 반응형 javaScript 로 동적
+                    구현
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+        color: "green",
+    },
+    {
+        label: <Tag color="purple">2015 .02</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    ALAND 온라인 쇼핑몰 글로벌 사이트 구축(영문, 중문)
+                    <br />
+                    고도몰 솔루션으로 영문, 중문 사이트 구축함.
+                    <br />
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">고도몰</Tag>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">HTML5</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2014 .09</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    TNGT 2015 브랜딩 사이트 구축
+                    <br />
+                    워드프레스를 이용하여 브랜딩 사이트 및 블로그 구축
+                    <br />
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">워드프레스</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2014 .06</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    카페24 솔루션을 이용하여 아이웨어 브랜드 PROJEKTPRODUKT
+                    온라인몰 구축
+                    <br />
+                    <a
+                        href="https://projektprodukt.co.kr/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://projektprodukt.co.kr
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">카페24</Tag>
+                    <Tag color="red">javaScript</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2012 .11</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    정림재단 사이트 워드프레스로 구축
+                    <br />
+                    <a
+                        href="http://junglim.org/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        http://junglim.org/
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">Wordpress</Tag>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        dot: <ClockCircleOutlined style={{ fontSize: "16px" }} />,
+        label: <Tag color="purple">2012 .05</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    A.P.C 아페세 코리아 온라인몰을 고도몰 솔루션을 이용하여 구축
+                    <br />
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">고도몰</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
 ];
 
-
 const year2004 = [
-  {
-    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="purple">2011 .11</Tag>),
-    children:
-      <>
-        <Paragraph>
-          한국무역협회 KITA, Web, Mobile 사이트 구축<br />
-          반응형 UI 구축 및 웹접근성 개선작업<br />
-          <a href="https://www.kita.net/" target="_blank" rel="noreferrer">https://www.kita.net</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">Web Accessibility</Tag>
-          <Tag color="red">Web 2.0</Tag>
-          <Tag color="red">HTML4</Tag>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ,
-    color: 'green',
-  },
-  {
-    label: (<Tag color="purple">2010 .07</Tag>),
-    children:
-      <>
-        <Paragraph>
-          롯데칠성음료 기업, 브랜딩 사이트 고도화<br />
-          웹접근성 개선을 위한 네비게이션과 메인페이지 interaction 을 javaScript 로 구현<br />
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">HTML4</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ,
-  },
-  {
-    label: (<Tag color="purple">2006 .12 ~ 2009. 06</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          국민연금관리공단, 건강보험심사원, KB, 삼성애니카, 증권사, 삼성 USA 등의<br />
-          웹접근성 개선 및 웹표준 UI 구현.
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">Web Accessibility</Tag>
-          <Tag color="red">Web 2.0</Tag>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">HTML4</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    label: (<Tag color="purple">2006 .9</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          SK 싸이월드2 통합 서비스 웹표준화 적용<br />
-          서비스 UI에 웹표준 및 웹접근성 적용을 위한 리팩토링<br />
-          <a href="https://www.cyworld.com/" target="_blank" rel="noreferrer">https://www.cyworld.com</a>
-        </Paragraph>
-        <Paragraph>
-          <Tag color="red">Web Accessibility</Tag>
-          <Tag color="red">Web 2.0</Tag>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">HTML4</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
-  {
-    dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
-    label: (<Tag color="purple">2004 .05 ~ 2006 .06</Tag>),
-    children: (
-      <>
-        <Paragraph>
-          신한증권, 한국방송통신대학교, 삼성화재, SBS, LG카드 웹표준화 적용을 위한 고도화 및 리팩토링<br />
-        </Paragraph>
-        <Paragraph>
-
-          <Tag color="red">Web Accessibility</Tag>
-          <Tag color="red">Web 2.0</Tag>
-          <Tag color="red">javaScript</Tag>
-          <Tag color="red">HTML4</Tag>
-          <Tag color="red">CSS3</Tag>
-        </Paragraph>
-      </>
-    ),
-  },
+    {
+        dot: <ClockCircleOutlined style={{ fontSize: "16px" }} />,
+        label: <Tag color="purple">2011 .11</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    한국무역협회 KITA, Web, Mobile 사이트 구축
+                    <br />
+                    반응형 UI 구축 및 웹접근성 개선작업
+                    <br />
+                    <a
+                        href="https://www.kita.net/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.kita.net
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">Web Accessibility</Tag>
+                    <Tag color="red">Web 2.0</Tag>
+                    <Tag color="red">HTML4</Tag>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+        color: "green",
+    },
+    {
+        label: <Tag color="purple">2010 .07</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    롯데칠성음료 기업, 브랜딩 사이트 고도화
+                    <br />
+                    웹접근성 개선을 위한 네비게이션과 메인페이지 interaction 을
+                    javaScript 로 구현
+                    <br />
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">HTML4</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2006 .12 ~ 2009. 06</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    국민연금관리공단, 건강보험심사원, KB, 삼성애니카, 증권사,
+                    삼성 USA 등의
+                    <br />
+                    웹접근성 개선 및 웹표준 UI 구현.
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">Web Accessibility</Tag>
+                    <Tag color="red">Web 2.0</Tag>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">HTML4</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        label: <Tag color="purple">2006 .9</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    SK 싸이월드2 통합 서비스 웹표준화 적용
+                    <br />
+                    서비스 UI에 웹표준 및 웹접근성 적용을 위한 리팩토링
+                    <br />
+                    <a
+                        href="https://www.cyworld.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://www.cyworld.com
+                    </a>
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">Web Accessibility</Tag>
+                    <Tag color="red">Web 2.0</Tag>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">HTML4</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
+    {
+        dot: <ClockCircleOutlined style={{ fontSize: "16px" }} />,
+        label: <Tag color="purple">2004 .05 ~ 2006 .06</Tag>,
+        children: (
+            <>
+                <Paragraph>
+                    신한증권, 한국방송통신대학교, 삼성화재, SBS, LG카드 웹표준화
+                    적용을 위한 고도화 및 리팩토링
+                    <br />
+                </Paragraph>
+                <Paragraph>
+                    <Tag color="red">Web Accessibility</Tag>
+                    <Tag color="red">Web 2.0</Tag>
+                    <Tag color="red">javaScript</Tag>
+                    <Tag color="red">HTML4</Tag>
+                    <Tag color="red">CSS3</Tag>
+                </Paragraph>
+            </>
+        ),
+    },
 ];
 
 export default function Home() {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
+    const {
+        token: { colorBgContainer },
+    } = theme.useToken();
 
-  return (
-    <>
-      <Head>
-        <title>Jintae Kim</title>
-        <meta name="description" content="Generated by create next app" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <Layout className="layout" style={{ background: '#f5f5f5' }}>
-          <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', padding: 0, background: colorBgContainer }}>
-            <Menu
-              theme="light"
-              mode="horizontal"
-              defaultSelectedKeys={['1']}
-              items={gnbItems}
-            />
-          </Header>
-          <Content style={{ padding: '24px' }}>
-            <Row
-              gutter={[16, 16]}
-            >
-              <Col md={12} sm={24}>
-                <Card bordered={false}>
-                  <Meta
-                    title="김 진태"
-                    description={
-                      <Paragraph type="secondary">
-                        Jintae Kim<br/>
-                        Birth: Apr 2, 1976<br />
-                        Live: 고양시<br />
-                        <a href="mailto:vuenos@gmail.com">vuenos@gmail.com</a>, <a
-                        href="mailto:jintae.email@gmail.com">jintae.email@gmail.com</a>
-                        <br/>
-                        <GithubOutlined/> <a href="https://github.com/vuenos" target="_blank"
-                                             rel="noreferrer">https://github.com/vuenos</a><br />
-                        <a href="https://www.thumbnail.co.kr" target="_blank"
-                           rel="noreferrer">https://www.thumbnail.co.kr</a>
-                      </Paragraph>
-                    }
-                  />
-                </Card>
-              </Col>
+    return (
+        <>
+            <Head>
+                <title>Jintae Kim</title>
+                <meta
+                    name="description"
+                    content="Generated by create next app"
+                />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <main>
+                <Layout className="layout" style={{ background: "#f5f5f5" }}>
+                    <Header
+                        style={{
+                            position: "sticky",
+                            top: 0,
+                            zIndex: 1,
+                            width: "100%",
+                            padding: 0,
+                            background: colorBgContainer,
+                        }}
+                    >
+                        <Menu
+                            theme="light"
+                            mode="horizontal"
+                            defaultSelectedKeys={["1"]}
+                            items={gnbItems}
+                        />
+                    </Header>
+                    <Content style={{ padding: "24px" }}>
+                        <div className="print-first-page-group">
+                            <Card className="print-profile-card" bordered={false}>
+                                <Row
+                                    className="print-profile-split"
+                                    gutter={[24, 16]}
+                                >
+                                    <Col md={12} sm={24}>
+                                        <Meta
+                                            title="김 진태"
+                                            description={
+                                                <Paragraph type="secondary">
+                                                    Jintae Kim
+                                                    <br />
+                                                    Birth: Apr 2, 1976
+                                                    <br />
+                                                    Live: 고양시
+                                                    <br />
+                                                    <a href="mailto:vuenos@gmail.com">
+                                                        vuenos@gmail.com
+                                                    </a>
+                                                    ,{" "}
+                                                    <a href="mailto:jintae.email@gmail.com">
+                                                        jintae.email@gmail.com
+                                                    </a>
+                                                    <br />
+                                                    <GithubOutlined />{" "}
+                                                    <a
+                                                        href="https://github.com/vuenos"
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                    >
+                                                        https://github.com/vuenos
+                                                    </a>
+                                                    <br />
+                                                    <a
+                                                        href="https://www.thumbnail.co.kr"
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                    >
+                                                        https://www.thumbnail.co.kr
+                                                    </a>
+                                                </Paragraph>
+                                            }
+                                        />
+                                    </Col>
 
-              <Col md={12} sm={24}>
-                <Card size="small" bordered={false}>
-                  <Meta
-                    title="Skills"
-                    description={
-                      <Paragraph type="secondary" style={{ lineHeight: '2.1em' }}>
-                        <Tag color="red">React</Tag>
-                        <Tag color="red">Next.js</Tag>
-                        <Tag color="red">Styled-Components</Tag>
-                        <Tag color="red">javaScript</Tag>
-                        <Tag color="red">SCSS</Tag>
-                        <Tag color="red">HTML5</Tag>
-                        <Tag color="red">CSS3</Tag>
-                        <Tag color="red">Ant Design</Tag>
-                        <Tag color="red">ReactQuery</Tag>
-                        <Tag color="red">git</Tag>
-                        <Tag color="red">Webflow</Tag>
-                        <Tag color="red">Instapage</Tag>
-                        <Tag color="red">Shopify</Tag>
+                                    <Col md={12} sm={24}>
+                                        <Meta
+                                            title="Skills"
+                                            description={
+                                                <Paragraph
+                                                    type="secondary"
+                                                    style={{
+                                                        lineHeight: "2.1em",
+                                                    }}
+                                                >
+                                                    <Tag color="red">React</Tag>
+                                                    <Tag color="red">
+                                                        Next.js
+                                                    </Tag>
+                                                    <Tag color="red">
+                                                        Styled-Components
+                                                    </Tag>
+                                                    <Tag color="red">
+                                                        javaScript
+                                                    </Tag>
+                                                    <Tag color="red">SCSS</Tag>
+                                                    <Tag color="red">HTML5</Tag>
+                                                    <Tag color="red">CSS3</Tag>
+                                                    <Tag color="red">
+                                                        Ant Design
+                                                    </Tag>
+                                                    <Tag color="red">
+                                                        ReactQuery
+                                                    </Tag>
+                                                    <Tag color="red">git</Tag>
+                                                    <Tag color="red">
+                                                        Webflow
+                                                    </Tag>
+                                                    <Tag color="red">
+                                                        Instapage
+                                                    </Tag>
+                                                    <Tag color="red">
+                                                        Shopify
+                                                    </Tag>
 
-                        <Tag color="blue">Redux, Recoil</Tag>
-                        <Tag color="blue">TypeScript</Tag>
-                        <Tag color="blue">bootstrap</Tag>
-                        <Tag color="blue">Figma</Tag>
-                        <Tag color="blue">AG Grid</Tag>
-                      </Paragraph>
-                    }
-                  />
-                </Card>
-              </Col>
-            </Row>
+                                                    <Tag color="blue">
+                                                        Redux, Recoil
+                                                    </Tag>
+                                                    <Tag color="blue">
+                                                        TypeScript
+                                                    </Tag>
+                                                    <Tag color="blue">
+                                                        bootstrap
+                                                    </Tag>
+                                                    <Tag color="blue">
+                                                        Figma
+                                                    </Tag>
+                                                    <Tag color="blue">
+                                                        AG Grid
+                                                    </Tag>
+                                                </Paragraph>
+                                            }
+                                        />
+                                    </Col>
+                                </Row>
+                            </Card>
 
-            <Row
-              gutter={[16, 16]}
-              style={{ marginTop: '24px', padding: 0, minHeight: 380, background: '#f5f5f5' }}
-            >
-              <Col span={24} lg={12}>
-                <Card
-                  title={<Title level={4} style={{ margin: '0' }}>2024 ~ 2025 <Text type="secondary"></Text></Title>}
-                  bordered={false}
-                >
-                  <Alert
-                    message="프리렌서 활동"
-                    type="info"
-                    showIcon
-                    style={{ marginBottom: '24px' }}
-                  />
-                  <Timeline
-                    mode="alternate"
-                    items={year2024}
-                  />
-                </Card>
-              </Col>
+                            <YearTimelineCard
+                                isFirstPrintSection
+                                sectionTitle="2024 ~ 2026"
+                                colProps={{ span: 24 }}
+                                title={
+                                    <Title level={4} style={{ margin: "0" }}>
+                                        2024 ~ 2026{" "}
+                                        <Text type="secondary"></Text>
+                                    </Title>
+                                }
+                                alertMessage="프리렌서 활동"
+                                items={year2024}
+                            />
+                        </div>
 
-              <Col span={24} lg={12}>
-                <Card
-                  title={<Title level={4} style={{ margin: '0' }}>2021 ~ 2023 <Text type="secondary">(셀러허브, 팀장)</Text></Title>}
-                  bordered={false}
-                >
-                  <Alert
-                    message="프론트엔드팀 구성하여 팀셀러허브의 운영 및 개선 관련 프론트 업무를 진행"
-                    type="info"
-                    showIcon
-                    style={{ marginBottom: '24px' }}
-                  />
-                  <Timeline
-                    mode="alternate"
-                    items={year2023}
-                  />
-                </Card>
-              </Col>
+                        <Row
+                            className="print-timeline-row"
+                            gutter={[16, 16]}
+                            style={{
+                                marginTop: "24px",
+                                padding: 0,
+                                minHeight: 380,
+                                background: "#f5f5f5",
+                            }}
+                        >
+                            <YearTimelineCard
+                                sectionTitle="2021 ~ 2023"
+                                title={
+                                    <Title level={4} style={{ margin: "0" }}>
+                                        2021 ~ 2023{" "}
+                                        <Text type="secondary">
+                                            (셀러허브, 팀장)
+                                        </Text>
+                                    </Title>
+                                }
+                                alertMessage="프론트엔드팀 구성하여 팀셀러허브의 운영 및 개선 관련 프론트 업무를 진행"
+                                items={year2023}
+                            />
 
-              <Col span={24} lg={12}>
-                <Card title={<Title level={4} style={{ margin: '0' }}>2018 ~ 2021 <Text type="secondary">(프리렌서)</Text></Title>} extra={<Text type="secondary">(주요 프로젝트만 기술함)</Text>} bordered={false}>
-                  <Alert
-                    message="관공서, 금융, 항공사 프로젝트 진행함. 주로 Web, Mobile 반응형 UI 구현과 웹접근성 인증마크 획득"
-                    type="info"
-                    showIcon
-                    style={{ marginBottom: '24px' }}
-                  />
-                  <Timeline
-                    mode="alternate"
-                    items={year2021}
-                  />
-                </Card>
-              </Col>
+                            <YearTimelineCard
+                                sectionTitle="2018 ~ 2021"
+                                title={
+                                    <Title level={4} style={{ margin: "0" }}>
+                                        2018 ~ 2021{" "}
+                                        <Text type="secondary">
+                                            (프리렌서)
+                                        </Text>
+                                    </Title>
+                                }
+                                extra={
+                                    <Text type="secondary">
+                                        (주요 프로젝트만 기술함)
+                                    </Text>
+                                }
+                                alertMessage="관공서, 금융, 항공사 프로젝트 진행함. 주로 Web, Mobile 반응형 UI 구현과 웹접근성 인증마크 획득"
+                                items={year2021}
+                            />
 
-              <Col span={24} lg={12}>
-                <Card title={<Title level={4} style={{ margin: '0' }}>2012 ~ 2017 <Text type="secondary">(코즈믹웹, Owner)</Text></Title>} extra={<Text type="secondary">(주요 프로젝트만 기술함)</Text>} bordered={false}>
-                  <Alert
-                    message="개인 창업 후 고도몰, 카페24 솔루션으로 쇼핑몰 구축과 워드프레스로 웹사이트 구축을 주로 함. Web + Mobile Responsive UI 를 주로 구현 함."
-                    type="info"
-                    showIcon
-                    style={{ marginBottom: '24px' }}
-                  />
-                  <Timeline
-                    mode="alternate"
-                    items={year2012}
-                  />
-                </Card>
-              </Col>
+                            <YearTimelineCard
+                                sectionTitle="2012 ~ 2017"
+                                title={
+                                    <Title level={4} style={{ margin: "0" }}>
+                                        2012 ~ 2017{" "}
+                                        <Text type="secondary">
+                                            (코즈믹웹, Owner)
+                                        </Text>
+                                    </Title>
+                                }
+                                extra={
+                                    <Text type="secondary">
+                                        (주요 프로젝트만 기술함)
+                                    </Text>
+                                }
+                                alertMessage="개인 창업 후 고도몰, 카페24 솔루션으로 쇼핑몰 구축과 워드프레스로 웹사이트 구축을 주로 함. Web + Mobile Responsive UI 를 주로 구현 함."
+                                items={year2012}
+                            />
 
-              <Col span={24} lg={12}>
-                <Card title={<Title level={4} style={{ margin: '0' }}>2004 ~ 2011 <Text type="secondary">(스타일**, 팀장)</Text></Title>} extra={<Text type="secondary">(주요 프로젝트만 기술함)</Text>} bordered={false}>
-                  <Alert
-                    message="관공서, 기업, 금융, 방송국 등의 웹접근성 인증마크 및 웹표준(웹 2.0) 개선 관련 컨설팅과 리팩토링 업무를 주로 함."
-                    type="info"
-                    showIcon
-                    style={{ marginBottom: '24px' }}
-                  />
-                  <Timeline
-                    mode="alternate"
-                    items={year2004}
-                  />
-                </Card>
-              </Col>
-            </Row>
-
-          </Content>
-          <Footer style={{ textAlign: 'center' }}>
-            <Paragraph type="secondary">©2024 Jintae kim</Paragraph>
-            <Paragraph type="secondary">
-              이 페이지는 <a href="https://ko.reactjs.org/" target="_blank" rel="noreferrer">React 18</a>, <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">TypeScript</a>, <a href="https://nextjs.org/blog/next-13" target="_blank" rel="noreferrer">Next.js 13</a> 과 <a href="https://ant.design" target="_blank" rel="noreferrer">Antd</a> 로 제작되었습니다.
-            </Paragraph>
-          </Footer>
-        </Layout>
-      </main>
-    </>
-  )
+                            <YearTimelineCard
+                                sectionTitle="2004 ~ 2011"
+                                title={
+                                    <Title level={4} style={{ margin: "0" }}>
+                                        2004 ~ 2011{" "}
+                                        <Text type="secondary">
+                                            (스타일**, 팀장)
+                                        </Text>
+                                    </Title>
+                                }
+                                extra={
+                                    <Text type="secondary">
+                                        (주요 프로젝트만 기술함)
+                                    </Text>
+                                }
+                                alertMessage="관공서, 기업, 금융, 방송국 등의 웹접근성 인증마크 및 웹표준(웹 2.0) 개선 관련 컨설팅과 리팩토링 업무를 주로 함."
+                                items={year2004}
+                            />
+                        </Row>
+                    </Content>
+                    <Footer style={{ textAlign: "center" }}>
+                        <Paragraph type="secondary">©2024 Jintae kim</Paragraph>
+                        <Paragraph type="secondary">
+                            이 페이지는{" "}
+                            <a
+                                href="https://ko.reactjs.org/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                React 18
+                            </a>
+                            ,{" "}
+                            <a
+                                href="https://www.typescriptlang.org/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                TypeScript
+                            </a>
+                            ,{" "}
+                            <a
+                                href="https://nextjs.org/blog/next-13"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Next.js 13
+                            </a>{" "}
+                            과{" "}
+                            <a
+                                href="https://ant.design"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Antd
+                            </a>{" "}
+                            로 제작되었습니다.
+                        </Paragraph>
+                    </Footer>
+                </Layout>
+            </main>
+        </>
+    );
 }
